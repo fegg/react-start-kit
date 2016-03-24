@@ -4,7 +4,8 @@ module.exports = {
   entry: './public/app.jsx',
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/dist'
+    path: path.join(__dirname, './dist'),
+    publicPath: '/dist'
   },
   module: {
     loaders: [{
@@ -14,6 +15,6 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
   }
 }
